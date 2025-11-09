@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Heart, Brain, Users, Sparkles, Cloud, Flower2 } from "lucide-react"
+import { Heart, Brain, Users, Hourglass, Timer, Flower2 } from "lucide-react"
 
 const services = [
   {
@@ -8,14 +8,14 @@ const services = [
     description: "Apoio para lidar com preocupação excessiva, tensão e sintomas físicos da ansiedade.",
   },
   {
-    icon: Cloud,
-    title: "Estresse",
-    description: "Estratégias para gerenciar sobrecarga emocional e recuperar o equilíbrio.",
+    icon: Flower2,
+    title: "Depressão",
+    description: "Acolhimento sensível às suas emoções, buscando estratégias para retomar a motivação.",
   },
   {
-    icon: Flower2,
-    title: "Luto",
-    description: "Acompanhamento sensível em processos de perda e elaboração do luto.",
+    icon: Timer,
+    title: "Autocobrança",
+    description: "Reconhecimento de padrões de autocrítica, ansiedade e estresse e desenvolvimento de formas mais saudáveis de enfrentá-los.",
   },
   {
     icon: Heart,
@@ -28,15 +28,15 @@ const services = [
     description: "Compreensão de padrões relacionais e construção de vínculos mais saudáveis.",
   },
   {
-    icon: Sparkles,
-    title: "Transições de Vida",
-    description: "Acompanhamento em momentos de mudança pessoal ou profissional.",
+    icon: Hourglass,
+    title: "Procrastinação",
+    description: "Identificação dos motivos de procrastinação e desenvolvimento de novas habilidades para superá-la de maneira equilibrada",
   },
 ]
 
 export function ServicesSection() {
   return (
-    <section id="servicos" className="py-20 md:py-32 px-4 bg-muted/30">
+    <section id="servicos" className="py-8 md:py-16 px-4 bg-muted/30">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-bold text-4xl md:text-5xl text-foreground mb-6 text-balance">Como posso te ajudar</h2>
@@ -60,10 +60,10 @@ export function ServicesSection() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="rounded-lg" asChild>
+          <Button size="lg" className="w-full sm:w-auto rounded-lg" asChild>
             <a href="#contato">Agendar uma conversa inicial</a>
           </Button>
-          <Button size="lg" variant="outline" className="rounded-lg bg-transparent" asChild>
+          <Button size="lg" variant="secondary" className="w-full sm:w-auto rounded-lg bg-transparent" asChild>
             <a href="#atendimento">Saiba mais sobre os atendimentos</a>
           </Button>
         </div>

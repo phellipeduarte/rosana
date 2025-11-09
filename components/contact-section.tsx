@@ -25,7 +25,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contato" className="py-20 md:py-32 px-4 bg-primary/15">
+    <section id="contato" className="py-8 md:py-16 px-4 bg-primary/15">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="font-bold text-4xl md:text-5xl text-foreground mb-6 text-balance">Agende sua consulta</h2>
@@ -119,8 +119,8 @@ export function ContactSection() {
           <Button
             type="button"
             size="lg"
-            variant="outline"
-            className="w-full text-lg py-6 rounded-lg bg-transparent"
+            variant="secondary"
+            className="w-full text-lg py-6 rounded-lg bg-transparent text-wrap whitespace-normal text-center py-10 sm:py-2"
             asChild
           >
             <a href="#faq">Saiba mais sobre os horários disponíveis</a>

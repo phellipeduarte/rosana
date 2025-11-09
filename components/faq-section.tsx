@@ -38,7 +38,7 @@ const faqs = [
 
 export function FaqSection() {
   return (
-    <section id="faq" className="py-20 md:py-32 px-4 bg-muted/30">
+    <section id="faq" className="py-8 md:py-16 px-4 bg-muted/30">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-bold text-4xl md:text-5xl text-foreground mb-6 text-balance">Perguntas Frequentes</h2>
@@ -61,10 +61,10 @@ export function FaqSection() {
         </Accordion>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="rounded-lg" asChild>
+          <Button size="lg" className="w-full sm:w-auto rounded-lg" asChild>
             <a href="#contato">Agendar primeira sessão</a>
           </Button>
-          <Button size="lg" variant="outline" className="rounded-lg bg-transparent" asChild>
+          <Button size="lg" variant="secondary" className="w-full sm:w-auto rounded-lg bg-transparent" asChild>
             <a href="#servicos">Saiba mais sobre o processo terapêutico</a>
           </Button>
         </div>

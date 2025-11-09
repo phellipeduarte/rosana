@@ -18,7 +18,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section id="depoimentos" className="py-20 md:py-32 px-4">
+    <section id="depoimentos" className="py-8 md:py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-bold text-4xl md:text-5xl text-foreground mb-6 text-balance">Depoimentos</h2>
@@ -38,10 +38,10 @@ export function TestimonialsSection() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="rounded-lg" asChild>
+          <Button size="lg" className="w-full sm:w-auto rounded-lg" asChild>
             <a href="#contato">Agendar consulta</a>
           </Button>
-          <Button size="lg" variant="outline" className="rounded-lg bg-transparent" asChild>
+          <Button size="lg" variant="secondary" className="w-full sm:w-auto rounded-lg bg-transparent" asChild>
             <a href="#sobre">Saiba mais sobre meu método de trabalho</a>
           </Button>
         </div>

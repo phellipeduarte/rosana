@@ -5,19 +5,30 @@
 
 :root {
   /* Updated to user-specified color palette */
-  --background: rgb(255 249 245); /* Principal - soft peachy cream */
-  --foreground: rgb(73 22 10); /* Contraste - dark brown */
-  --card: rgb(255 252 250); /* Slightly lighter than background */
+  --background: rgb(255 249 245);
+  /* Principal - soft peachy cream */
+  --foreground: rgb(73 22 10);
+  /* Contraste - dark brown */
+  --card: rgb(255 252 250);
+  /* Slightly lighter than background */
   --card-foreground: rgb(73 22 10);
   --popover: rgb(255 252 250);
   --popover-foreground: rgb(73 22 10);
-  --primary: rgb(255 123 87); /* Destaque - coral/orange accent */
+  --primary: rgb(255 123 87);
+  /* Destaque - coral/orange accent */
   --primary-foreground: rgb(255 249 245);
-  --secondary: rgb(245 235 225); /* Warm beige */
+  --secondary: rgb(245 235 225);
+  /* Warm beige */
   --secondary-foreground: rgb(73 22 10);
-  --muted: rgb(240 230 220); /* Light warm gray */
+  --tertiary: rgb(217 178 255);
+  /* Lavanda rosado (#d9b2ff) */
+  --tertiary-foreground: rgb(45 34 89);
+  /* Texto contrastante para o lavanda */
+  --muted: rgb(240 230 220);
+  /* Light warm gray */
   --muted-foreground: rgb(100 50 30);
-  --accent: rgb(255 123 87); /* Destaque color for accents */
+  --accent: rgb(255 123 87);
+  /* Destaque color for accents */
   --accent-foreground: rgb(73 22 10);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(1 0 0);
@@ -51,6 +62,8 @@
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
+  --tertiary: rgb(120 90 180);
+  --tertiary-foreground: rgb(240 235 255);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
   --accent: oklch(0.269 0 0);
@@ -88,6 +101,8 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-foreground: var(--tertiary-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
@@ -120,9 +135,11 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     scroll-behavior: smooth;
   }
