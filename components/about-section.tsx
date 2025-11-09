@@ -54,7 +54,7 @@ export function AboutSection() {
                 <a href="#contato">Agendar consulta</a>
               </Button>
               <Button size="lg" variant="secondary" className="w-full sm:w-auto rounded-lg bg-transparent" asChild>
-                <a href="#sobre">Saiba mais sobre minha trajetória</a>
+                <a href="#servicos">Saiba como posso te ajudar</a>
               </Button>
             </div>
           </div>

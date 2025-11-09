@@ -64,7 +64,7 @@ export function ServicesSection() {
             <a href="#contato">Agendar uma conversa inicial</a>
           </Button>
           <Button size="lg" variant="secondary" className="w-full sm:w-auto rounded-lg bg-transparent" asChild>
-            <a href="#atendimento">Saiba mais sobre os atendimentos</a>
+            <a href="#modalidades">Saiba mais sobre os atendimentos</a>
           </Button>
         </div>
       </div>

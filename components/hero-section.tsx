@@ -33,7 +33,7 @@ export function HeroSection() {
           Acolhimento, escuta e cuidado para o seu bem-estar emocional.
         </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
+        <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-3 mb-8">
           <Badge
             variant="secondary"
             className="px-4 py-2 text-sm font-normal bg-card/90 text-foreground border border-border"

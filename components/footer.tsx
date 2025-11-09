@@ -1,6 +1,10 @@
 import { Mail, Instagram, Phone } from "lucide-react"
 
 export function Footer() {
+  const whatsappNumber = "5532991666322"
+  const message = encodeURIComponent("Olá, eu gostaria de começar a fazer terapia!")
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`
+
   return (
     <footer className="bg-foreground/5 py-12 px-4">
       <div className="max-w-6xl mx-auto">
@@ -46,7 +50,7 @@ export function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Contato</h4>
             <div className="flex flex-col gap-3">
               <a
-                href="https://wa.me/5511999999999"
+                href={whatsappUrl}
                 className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -55,7 +59,7 @@ export function Footer() {
                 <span>WhatsApp</span>
               </a>
               <a
-                href="https://instagram.com/rosanamoreira"
+                href="https://www.instagram.com/rosanapmoreira.psi/"
                 className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -64,7 +68,7 @@ export function Footer() {
                 <span>Instagram</span>
               </a>
               <a
-                href="mailto:contato@rosanamoreira.com.br"
+                href="mailto:rosana.rpmjf@hotmail.com"
                 className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors"
               >
                 <Mail className="w-5 h-5" />

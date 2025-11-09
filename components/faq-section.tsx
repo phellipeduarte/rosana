@@ -25,9 +25,8 @@ const faqs = [
       "Você pode agendar sua primeira sessão através do formulário de contato nesta página, por WhatsApp ou e-mail. Entrarei em contato para confirmar o horário e esclarecer qualquer dúvida.",
   },
   {
-    question: "Qual é o valor da consulta?",
-    answer:
-      "Os valores são informados no primeiro contato, levando em consideração a modalidade escolhida (online ou presencial). Entre em contato para mais informações sobre investimento e formas de pagamento.",
+    question: "Qual o valor das sessões?",
+    answer: "Os valores podem ser informados pelo WhatsApp. Fique à vontade para entrar em contato e saber mais sobre o investimento e as formas de pagamento."
   },
   {
     question: "Preciso de encaminhamento médico?",

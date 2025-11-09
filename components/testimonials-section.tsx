@@ -42,7 +42,7 @@ export function TestimonialsSection() {
             <a href="#contato">Agendar consulta</a>
           </Button>
           <Button size="lg" variant="secondary" className="w-full sm:w-auto rounded-lg bg-transparent" asChild>
-            <a href="#sobre">Saiba mais sobre meu método de trabalho</a>
+            <a href="#faq">Saiba mais sobre meu método de trabalho</a>
           </Button>
         </div>
       </div>

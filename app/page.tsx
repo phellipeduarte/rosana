@@ -7,8 +7,10 @@ import { TestimonialsSection } from "@/components/testimonials-section"
 import { FaqSection } from "@/components/faq-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
+import { WhatsAppButton } from "@/components/whatsapp-button"
 
 export default function Home() {
+
   return (
     <>
       <Navigation />
@@ -22,6 +24,7 @@ export default function Home() {
         <ContactSection />
         <Footer />
       </main>
+      <WhatsAppButton />
     </>
   )
 }

@@ -52,12 +52,11 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isHidden ? "-translate-y-full" : "translate-y-0"
-      } ${isScrolled ? "bg-background/95 backdrop-blur-sm shadow-md" : "bg-transparent"}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isHidden ? "-translate-y-full" : "translate-y-0"
+        } ${isScrolled ? "bg-background/95 backdrop-blur-sm shadow-md" : "bg-transparent"}`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto">
+        <div className="flex items-center justify-between h-20 px-4">
           {/* Logo */}
           <a href="#" onClick={(e) => handleNavClick(e, "#")} className="flex items-center gap-3">
             <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
@@ -107,7 +106,7 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-sm">
+          <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-sm px-4">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
