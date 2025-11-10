@@ -1,42 +1,46 @@
-import { Quote } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
 const testimonials = [
   {
-    text: "Rosana me ajudou a enxergar novas perspectivas em um momento muito difícil. Sua escuta acolhedora fez toda a diferença.",
-    author: "Paciente, 32 anos",
+    quote: "Minha experiência com a Rosana está sendo excepcional! Pena que demorei demais para encontrá-la. Excelente profissional!",
+    name: "Giovanna",
   },
   {
-    text: "As sessões foram fundamentais para meu crescimento pessoal. Recomendo de coração.",
-    author: "Paciente, 45 anos",
+    quote: "Confesso que nunca fui muito adepto da terapia, mas com a Rosana descobri o quanto ela é importante para nossa saúde mental. As consultas são leves, tranquilas e o tempo passa voando. Excelente profissional!",
+    name: "Victor",
+  },
+
+  {
+    quote: "Uma profissional excelente, amiga, acolhedora, paciente e de um coração enorme. Sou muito grata por tê lá em minha vida.",
+    name: "Jacqueline",
   },
   {
-    text: "Encontrei no consultório um espaço seguro para falar sobre minhas angústias. A terapia transformou minha vida.",
-    author: "Paciente, 28 anos",
+    quote: "Rosana é uma profissional com olhar atento, com fala doces, firmes e precisas.",
+    name: "Elaine",
   },
+  {
+    quote: "A Rosana é muito atenciosa e fácil de se conectar com. Evolui muito no meu autoconhecimento desde que começamos. Além da terapia em si, ela ensina o processo e as armadilhas estudadas na terapia cognitiva comportamental.",
+    name: "Isabela",
+  }
 ]
 
 export function TestimonialsSection() {
   return (
     <section id="depoimentos" className="py-8 md:py-16 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="font-bold text-4xl md:text-5xl text-foreground mb-6 text-balance">Depoimentos</h2>
           <p className="text-lg leading-relaxed text-foreground/80 max-w-2xl mx-auto">
             Veja o que alguns pacientes compartilham sobre sua experiência terapêutica.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-card p-8 rounded-2xl shadow-sm border border-border/50 relative">
-              <Quote className="w-8 h-8 text-accent/40 mb-4" />
-              <p className="text-foreground/80 leading-relaxed mb-6 italic">"{testimonial.text}"</p>
-              <p className="text-sm text-muted-foreground font-medium">— {testimonial.author}</p>
-            </div>
-          ))}
-        </div>
-
+        <InfiniteMovingCards
+          items={testimonials}
+          direction="right"
+          speed="slow"
+        />
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button size="lg" className="w-full sm:w-auto rounded-lg" asChild>
             <a href="#contato">Agendar consulta</a>
