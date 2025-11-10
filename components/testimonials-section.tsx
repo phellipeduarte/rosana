@@ -4,7 +4,7 @@ import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 const testimonials = [
   {
     quote: "Minha experiência com a Rosana está sendo excepcional! Pena que demorei demais para encontrá-la. Excelente profissional!",
-    name: "Giovanna",
+    name: "Giovana",
   },
   {
     quote: "Confesso que nunca fui muito adepto da terapia, mas com a Rosana descobri o quanto ela é importante para nossa saúde mental. As consultas são leves, tranquilas e o tempo passa voando. Excelente profissional!",
@@ -41,7 +41,7 @@ export function TestimonialsSection() {
           direction="right"
           speed="slow"
         />
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
           <Button size="lg" className="w-full sm:w-auto rounded-lg" asChild>
             <a href="#contato">Agendar consulta</a>
           </Button>
