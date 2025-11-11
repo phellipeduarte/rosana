@@ -20,6 +20,10 @@ export function ContactSection() {
     message: "",
   })
 
+  const whatsappNumber = "5532991666322"
+  const message = encodeURIComponent("Olá, eu gostaria de começar a fazer terapia!")
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`
+
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
@@ -173,10 +177,10 @@ export function ContactSection() {
             type="button"
             size="lg"
             variant="outline"
-            className="w-full text-lg py-6 rounded-lg bg-transparent"
+            className="w-full text-lg sm:py-6 rounded-lg bg-transparent whitespace-normal text-center py-10"
             asChild
           >
-            <a href="#faq">Saiba mais sobre os horários disponíveis</a>
+            <a href={whatsappUrl} target="_blank">Saiba mais sobre os horários disponíveis</a>
           </Button>
         </form>
       </div>
