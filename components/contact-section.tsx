@@ -29,8 +29,6 @@ export function ContactSection() {
     setLoading(true);
     setStatus("idle");
 
-    const form = e.currentTarget;
-
     try {
       const res = await fetch("/api/form", {
         method: "POST",
@@ -176,7 +174,7 @@ export function ContactSection() {
           <Button
             type="button"
             size="lg"
-            variant="outline"
+            variant="secondary"
             className="w-full text-lg sm:py-6 rounded-lg bg-transparent whitespace-normal text-center py-10"
             asChild
           >

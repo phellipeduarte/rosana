@@ -90,7 +90,7 @@ export function Navigation() {
               }}
               className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg"
             >
-              Agendar Consulta
+              Agendar sessão
             </Button>
           </div>
 

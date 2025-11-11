@@ -23,7 +23,7 @@ export function AboutSection() {
           {/* Text */}
           <div className="order-1 md:order-2">
             <h2 className="font-bold text-4xl md:text-5xl text-foreground mb-6 text-balance">Sobre mim</h2>
-            <div className="space-y-4 text-lg leading-relaxed text-foreground/80">
+            <div className="space-y-4 text-lg leading-relaxed text-foreground/80 text-justify">
               <p>
                 Sou Rosana Moreira, psicóloga clínica há 20 anos, especialista em Terapias Cognitivas e Terapia do Esquema.
                 Atendo jovens, adultos e casais, com uma escuta empática e acolhedora, focada no equilíbrio emocional e autoconhecimento.
@@ -51,7 +51,7 @@ export function AboutSection() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="w-full sm:w-auto rounded-lg" asChild>
-                <a href="#contato">Agendar consulta</a>
+                <a href="#contato">Agendar sessão</a>
               </Button>
               <Button size="lg" variant="secondary" className="w-full sm:w-auto rounded-lg bg-transparent" asChild>
                 <a href="#servicos">Saiba como posso te ajudar</a>
