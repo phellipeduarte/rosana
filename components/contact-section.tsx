@@ -65,12 +65,12 @@ export function ContactSection() {
     <section id="contato" className="py-8 md:py-16 px-4 bg-primary/15">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-bold text-4xl md:text-5xl text-foreground mb-6 text-balance">Agende sua consulta</h2>
+          <h2 className="font-bold text-4xl md:text-5xl text-foreground mb-6 text-balance">Agende sua sessão</h2>
           <p className="text-lg leading-relaxed text-foreground/80">
             Entre em contato para marcar uma sessão ou tirar suas dúvidas.
           </p>
           <p className="text-lg leading-relaxed text-foreground/80 mt-2">
-            Sua jornada de cuidado com a mente e as emoções pode começar hoje.
+            Sua jornada de cuidado com a mente e as emoções pode começar <span className="font-bold text-primary">hoje</span>.
           </p>
         </div>
 

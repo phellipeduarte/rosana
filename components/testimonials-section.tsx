@@ -43,7 +43,7 @@ export function TestimonialsSection() {
         />
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
           <Button size="lg" className="w-full sm:w-auto rounded-lg" asChild>
-            <a href="#contato">Agendar consulta</a>
+            <a href="#contato">Agendar sessão</a>
           </Button>
           <Button size="lg" variant="secondary" className="w-full sm:w-auto rounded-lg bg-transparent" asChild>
             <a href="#faq">Saiba mais sobre meu método de trabalho</a>

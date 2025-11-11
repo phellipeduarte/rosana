@@ -61,7 +61,7 @@ export function ServicesSection() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button size="lg" className="w-full sm:w-auto rounded-lg" asChild>
-            <a href="#contato">Agendar uma conversa inicial</a>
+            <a href="#contato">Agendar primeira sessão</a>
           </Button>
           <Button size="lg" variant="secondary" className="w-full sm:w-auto rounded-lg bg-transparent" asChild>
             <a href="#modalidades">Saiba mais sobre os atendimentos</a>
