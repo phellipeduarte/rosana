@@ -16,7 +16,7 @@ export function ContactSection() {
     name: "",
     email: "",
     phone: "",
-    modality: "online",
+    modality: "individual",
     message: "",
   })
 
