@@ -10,9 +10,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Rosana Moreira — Psicóloga Clínica",
+  title: "rosana moreira",
   description:
-    "Psicóloga clínica com foco em atendimentos individuais para adultos e jovens adultos. Acolhimento, escuta empática e cuidado para o seu bem-estar emocional. Atendimento online e presencial.",
+    "Psicóloga clínica com foco em atendimentos individuais e casais para adultos e jovens adultos. Acolhimento, escuta empática e cuidado para o seu bem-estar emocional. Atendimento online.",
   generator: "v0.app",
 }
 

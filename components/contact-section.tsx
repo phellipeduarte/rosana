@@ -141,15 +141,15 @@ export function ContactSection() {
               className="flex gap-6"
             >
               <div className="flex items-center space-x-2">
-                <RadioGroupItem value="online" id="online" />
-                <Label htmlFor="online" className="font-normal cursor-pointer">
-                  Online
+                <RadioGroupItem value="individual" id="individual" />
+                <Label htmlFor="individual" className="font-normal cursor-pointer">
+                  Individual
                 </Label>
               </div>
               <div className="flex items-center space-x-2">
-                <RadioGroupItem value="presencial" id="presencial" />
-                <Label htmlFor="presencial" className="font-normal cursor-pointer">
-                  Presencial
+                <RadioGroupItem value="casal" id="casal" />
+                <Label htmlFor="casal" className="font-normal cursor-pointer">
+                  Casal
                 </Label>
               </div>
             </RadioGroup>
