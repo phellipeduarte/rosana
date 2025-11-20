@@ -1,22 +1,94 @@
+"use client"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Brain, Video } from "lucide-react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 
 export function AboutSection() {
+
+  const folder = "/profile"
+
+  const images = [
+    {
+      src: `${folder}/profile-1.jpg`,
+      alt: "Rosana Moreira - Foto 1"
+    },
+    {
+      src: `${folder}/profile-2.jpg`,
+      alt: "Rosana Moreira - Foto 2"
+    },
+    {
+      src: `${folder}/profile-3.jpg`,
+      alt: "Rosana Moreira - Foto 3"
+    }
+  ]
+
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [progress, setProgress] = useState(0)
+  const slideDuration = 10000
+  const increment = 100 / (slideDuration / 100)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        const next = prev + increment
+        if (next >= 100) {
+          setCurrentIndex((current) => (current + 1) % images.length)
+          return 0
+        }
+        return prev + (100 / (slideDuration / 100))
+      })
+    }, 100)
+
+    return () => clearInterval(interval)
+  }, [images.length])
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index)
+    setProgress(0)
+  }
+
   return (
     <section id="sobre" className="py-8 md:py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          {/* Photo */}
-          <div className="order-2 md:order-1">
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg group">
+            {/* Images */}
+            {images.map((image, index) => (
               <Image
-                src="/profile.jpg"
+                key={index}
+                src={image.src || "/placeholder.svg"}
                 width={1920}
                 height={1080}
-                alt="Consultório de psicologia com ambiente acolhedor"
+                alt={image.alt}
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+                  }`}
               />
+            ))}
+
+            {/* Progress bars overlay */}
+            <div className="absolute top-4 left-4 right-4 flex gap-2 z-10">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className="flex-1 h-1 bg-white/30 backdrop-blur-sm rounded-full overflow-hidden cursor-pointer hover:bg-white/40 transition-colors"
+                  aria-label={`Ir para foto ${index + 1}`}
+                >
+                  <div
+                    className="h-full bg-white rounded-full transition-all duration-100 ease-linear"
+                    style={{
+                      width: index === currentIndex ? `${progress}%` : index < currentIndex ? '100%' : '0%'
+                    }}
+                  />
+                </button>
+              ))}
+            </div>
+
+            {/* Slide counter */}
+            <div className="absolute bottom-4 right-4 bg-foreground/60 backdrop-blur-sm text-background px-3 py-1.5 rounded-full text-sm font-medium">
+              {currentIndex + 1} / {images.length}
             </div>
           </div>
 
