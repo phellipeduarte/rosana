@@ -26,7 +26,7 @@ export function AboutSection() {
 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [progress, setProgress] = useState(0)
-  const slideDuration = 10000
+  const slideDuration = 7000
   const increment = 100 / (slideDuration / 100)
 
   useEffect(() => {

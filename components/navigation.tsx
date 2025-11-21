@@ -5,6 +5,7 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -59,13 +60,20 @@ export function Navigation() {
         <div className="flex items-center justify-between h-20 px-4">
           {/* Logo */}
           <a href="#" onClick={(e) => handleNavClick(e, "#")} className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+            {/* <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
               <span className="text-primary text-xl font-bold">&</span>
             </div>
             <div className="flex flex-col">
               <span className="text-foreground font-bold text-lg leading-tight">rosana moreira</span>
               <span className="text-foreground/60 text-xs">Psicóloga Clínica</span>
-            </div>
+            </div> */}
+            <Image
+              className="h-12 w-auto object-contain"
+              src="/s-logo.svg"
+              width={160}
+              height={90}
+              alt="Consultório de psicologia com ambiente acolhedor"
+            />
           </a>
 
           {/* Desktop Navigation */}

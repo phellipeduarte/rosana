@@ -1,4 +1,5 @@
 import { Mail, Instagram, Phone } from "lucide-react"
+import Image from "next/image"
 
 export function Footer() {
   const whatsappNumber = "5532991666322"
@@ -12,12 +13,13 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center">
-                <span className="text-2xl text-accent-foreground font-serif">&</span>
-              </div>
-              <div>
-                <h3 className="font-serif text-xl text-foreground">rosana moreira</h3>
-              </div>
+              <Image
+                className="h-12 w-auto object-contain"
+                src="/s-logo.svg"
+                width={1920}
+                height={1080}
+                alt="Consultório de psicologia com ambiente acolhedor"
+              />
             </div>
             <p className="text-foreground/70">Psicóloga Clínica</p>
             <p className="text-sm text-foreground/60 mt-2">CRP 04/24000</p>
