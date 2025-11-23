@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Brain, Video } from "lucide-react"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 
 export function AboutSection() {
@@ -26,35 +26,76 @@ export function AboutSection() {
 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [progress, setProgress] = useState(0)
-  const slideDuration = 7000
-  const increment = 100 / (slideDuration / 100)
+  const [isPaused, setIsPaused] = useState(false)
+  const slideDuration = 5000 // 5 seconds per slide
+  const timerRef = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
+    if (isPaused) return
+
     const interval = setInterval(() => {
       setProgress((prev) => {
-        const next = prev + increment
-        if (next >= 100) {
+        if (prev >= 100) {
           setCurrentIndex((current) => (current + 1) % images.length)
           return 0
         }
-        return prev + (100 / (slideDuration / 100))
+        return prev + 100 / (slideDuration / 100)
       })
     }, 100)
 
     return () => clearInterval(interval)
-  }, [images.length])
+  }, [images.length, isPaused])
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index)
     setProgress(0)
   }
 
+  const handleImageClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const width = rect.width
+
+    if (x < width / 2) {
+      setCurrentIndex((current) => (current - 1 + images.length) % images.length)
+    } else {
+      setCurrentIndex((current) => (current + 1) % images.length)
+    }
+    setProgress(0)
+  }
+
+  const handleMouseDown = () => {
+    setIsPaused(true)
+  }
+
+  const handleMouseUp = () => {
+    setIsPaused(false)
+  }
+
+  const handleTouchStart = () => {
+    setIsPaused(true)
+  }
+
+  const handleTouchEnd = () => {
+    setIsPaused(false)
+  }
+
+
   return (
     <section id="sobre" className="py-8 md:py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg group">
+          <div
+            className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg group cursor-pointer select-none"
+            onClick={handleImageClick}
+            onMouseDown={handleMouseDown}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseUp}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
             {/* Images */}
+
             {images.map((image, index) => (
               <Image
                 key={index}
@@ -68,26 +109,21 @@ export function AboutSection() {
             ))}
 
             {/* Progress bars overlay */}
-            <div className="absolute top-4 left-4 right-4 flex gap-2 z-10">
+            <div className="absolute top-4 left-4 right-4 flex gap-2 z-10 pointer-events-none">
               {images.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className="flex-1 h-1 bg-white/30 backdrop-blur-sm rounded-full overflow-hidden cursor-pointer hover:bg-white/40 transition-colors"
-                  aria-label={`Ir para foto ${index + 1}`}
-                >
+                <div key={index} className="flex-1 h-1 bg-white/30 backdrop-blur-sm rounded-full overflow-hidden">
                   <div
                     className="h-full bg-white rounded-full transition-all duration-100 ease-linear"
                     style={{
                       width: index === currentIndex ? `${progress}%` : index < currentIndex ? '100%' : '0%'
                     }}
                   />
-                </button>
+                </div>
               ))}
             </div>
 
             {/* Slide counter */}
-            <div className="absolute bottom-4 right-4 bg-foreground/60 backdrop-blur-sm text-background px-3 py-1.5 rounded-full text-sm font-medium">
+            <div className="absolute bottom-4 right-4 bg-foreground/60 backdrop-blur-sm text-background px-3 py-1.5 rounded-full text-sm font-medium pointer-events-none">
               {currentIndex + 1} / {images.length}
             </div>
           </div>
