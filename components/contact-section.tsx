@@ -185,7 +185,7 @@ export function ContactSection() {
 
           <div className="md:block relative rounded-2xl overflow-hidden">
             <Image
-              src="/profile/contact-1.jpg"
+              src="/profile/contact.jpg"
               alt="Psicóloga acolhendo paciente"
               fill
               className="object-cover"
