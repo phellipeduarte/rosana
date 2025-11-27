@@ -135,7 +135,7 @@ export function AboutSection() {
               <p>
                 Sou Rosana Moreira, psicóloga clínica há 20 anos, especialista em Terapias Cognitivas e Terapia do Esquema.
                 Atendo jovens, adultos e casais, com uma escuta empática e acolhedora, focada no equilíbrio emocional e autoconhecimento.
-                Minha prática busca promover transformações positivas por meio das Terapias Cognitivas.
+                Minha prática busca promover transformações positivas, desenvolvendo clareza e um senso de significado e propósito.
               </p>
               <p>Você não precisa dar conta de tudo sozinho!</p>
             </div>
