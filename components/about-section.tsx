@@ -133,7 +133,7 @@ export function AboutSection() {
             <h2 className="font-bold text-4xl md:text-5xl text-foreground mb-6 text-balance">Sobre mim</h2>
             <div className="space-y-4 text-lg leading-relaxed text-foreground/80 text-justify">
               <p>
-                Sou Rosana Moreira, psicóloga clínica há 20 anos, especialista em Terapias Cognitivas e Terapia do Esquema.
+                Sou Rosana Moreira, psicóloga clínica especialista em Terapias Cognitivas e Terapia do Esquema.
                 Atendo jovens, adultos e casais, com uma escuta empática e acolhedora, focada no equilíbrio emocional e autoconhecimento.
                 Minha prática busca promover transformações positivas, desenvolvendo clareza e um senso de significado e propósito.
               </p>

@@ -18,7 +18,7 @@ export function ModalitiesSection() {
             <User className="w-12 h-12 text-tertiary-foreground mx-auto mb-4" strokeWidth={1.5} />
             <h3 className="font-bold text-2xl text-tertiary-foreground mb-3">Individual</h3>
             <p className="text-tertiary-foreground/70 leading-relaxed">
-              Espaço voltado ao autoconhecimento, ao cuidado emocional e ao desenvolvimento pessoal.
+              Atendimento voltado ao autoconhecimento, ao cuidado emocional e ao desenvolvimento pessoal.
             </p>
           </div>
 
